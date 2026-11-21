@@ -18,13 +18,13 @@ defmodule MingaGhostCursorsTest do
       assert Keyword.fetch!(opts, :execute) == {MingaGhostCursors.Commands, :follow}
     end
 
-    test "declares SPC a F keybinding" do
+    test "declares SPC a G keybinding" do
       keybinds = MingaGhostCursors.__keybind_schema__()
       assert length(keybinds) == 1
 
       [{mode, key, command, desc, _opts}] = keybinds
       assert mode == :normal
-      assert key == "SPC a F"
+      assert key == "SPC a G"
       assert command == :ghost_cursor_follow
       assert desc == "Follow agent's file"
     end

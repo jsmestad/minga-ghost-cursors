@@ -10,11 +10,11 @@ Use a [Minga](https://github.com/jsmestad/minga) build that includes the extensi
 extension :minga_ghost_cursors, git: "https://github.com/jsmestad/minga-ghost-cursors"
 ```
 
-Press `SPC a F` in normal mode to jump to the most recent agent edit position.
+Press `SPC a G` in normal mode to jump to the most recent agent edit position.
 
 ## Development
 
-Use the Elixir and Erlang/OTP versions in [`.tool-versions`](.tool-versions). The SDK is a compile-time dependency; Minga supplies the real editor APIs at runtime.
+Use the Elixir and Erlang/OTP versions in the [CI workflow](.github/workflows/ci.yml). The SDK is a compile-time dependency; Minga supplies the real editor APIs at runtime.
 
 ```sh
 export MIX_ENV=test

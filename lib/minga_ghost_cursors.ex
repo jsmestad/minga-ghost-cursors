@@ -7,7 +7,7 @@ defmodule MingaGhostCursors do
   location and updates as the agent continues editing. The cursor
   disappears when the agent session ends.
 
-  Provides `SPC a F` to jump to the file an agent is currently editing.
+  Provides `SPC a G` to jump to the file an agent is currently editing.
   """
 
   use Minga.Extension.Editor
@@ -16,7 +16,7 @@ defmodule MingaGhostCursors do
     execute: {MingaGhostCursors.Commands, :follow}
   )
 
-  keybind(:normal, "SPC a F", :ghost_cursor_follow, "Follow agent's file")
+  keybind(:normal, "SPC a G", :ghost_cursor_follow, "Follow agent's file")
 
   @impl true
   def name, do: :minga_ghost_cursors
