@@ -13,6 +13,7 @@ defmodule MingaGhostCursors.MixProject do
       deps: deps(),
       description: "Ghost cursor overlays for Minga agent editing sessions",
       source_url: @source_url,
+      docs: [main: "readme", extras: ["README.md", "LICENSE"]],
       package: [
         licenses: ["MIT"],
         links: %{"GitHub" => @source_url},
@@ -32,7 +33,8 @@ defmodule MingaGhostCursors.MixProject do
   defp deps do
     [
       {:minga_sdk, "~> 0.1.1", only: [:dev, :test], runtime: false},
-      {:credo, "~> 1.7", only: [:dev, :test], runtime: false}
+      {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
+      {:ex_doc, "~> 0.40", only: :dev, runtime: false}
     ]
   end
 end
